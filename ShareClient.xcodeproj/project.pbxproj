@@ -46,6 +46,17 @@
 		43AB51362133177800B3D58D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB51352133177800B3D58D /* LocalizedString.swift */; };
 		43AB51372133177800B3D58D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB51352133177800B3D58D /* LocalizedString.swift */; };
 		43C418AF1CE0488900405B6A /* ShareClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C418AE1CE0488900405B6A /* ShareClient.swift */; };
+		A92040312238703B007D29EC /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325E9CE210E6A0A00969CE5 /* HKUnit.swift */; };
+		A92040322238703B007D29EC /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325E9D0210E6A3D00969CE5 /* TimeInterval.swift */; };
+		A92040332238703B007D29EC /* ShareClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8EC9C210E68CE00A81379 /* ShareClientManager.swift */; };
+		A92040342238703B007D29EC /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB51352133177800B3D58D /* LocalizedString.swift */; };
+		A92040352238703B007D29EC /* ShareGlucose+GlucoseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8EC9A210E68BA00A81379 /* ShareGlucose+GlucoseKit.swift */; };
+		A92040362238703B007D29EC /* ShareClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C418AE1CE0488900405B6A /* ShareClient.swift */; };
+		A92040372238703B007D29EC /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A8EC98210E682A00A81379 /* ShareService.swift */; };
+		A92040392238703B007D29EC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8EC94210E67B000A81379 /* HealthKit.framework */; };
+		A920403A2238703B007D29EC /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8EC7B210E661400A81379 /* LoopKit.framework */; };
+		A920403C2238703B007D29EC /* ShareClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 432B0E8B1CDFC3C50045347B /* ShareClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A920403E2238703B007D29EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43AB5125213315D300B3D58D /* Localizable.strings */; };
 		C17D3CC52184CBCD003458C8 /* LoopKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43A8EC7B210E661400A81379 /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C17D3CC62184CC26003458C8 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8EC7B210E661400A81379 /* LoopKit.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +82,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 432B0E871CDFC3C50045347B;
 			remoteInfo = ShareClient;
+		};
+		A920402F2238703B007D29EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 432B0E7F1CDFC3C50045347B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43A8EC75210E653B00A81379;
+			remoteInfo = Cartfile;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -133,6 +151,7 @@
 		43AB51302133161A00B3D58D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43AB51352133177800B3D58D /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		43C418AE1CE0488900405B6A /* ShareClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareClient.swift; sourceTree = "<group>"; };
+		A92040422238703B007D29EC /* ShareClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShareClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +183,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A92040382238703B007D29EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A92040392238703B007D29EC /* HealthKit.framework in Frameworks */,
+				A920403A2238703B007D29EC /* LoopKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -185,6 +213,7 @@
 				432B0E881CDFC3C50045347B /* ShareClient.framework */,
 				432B0E921CDFC3C50045347B /* ShareClientTests.xctest */,
 				43A8EC82210E664300A81379 /* ShareClientUI.framework */,
+				A92040422238703B007D29EC /* ShareClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +296,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A920403B2238703B007D29EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A920403C2238703B007D29EC /* ShareClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -327,6 +364,25 @@
 			productReference = 43A8EC82210E664300A81379 /* ShareClientUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A920402D2238703B007D29EC /* ShareClient-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A920403F2238703B007D29EC /* Build configuration list for PBXNativeTarget "ShareClient-watchOS" */;
+			buildPhases = (
+				A92040302238703B007D29EC /* Sources */,
+				A92040382238703B007D29EC /* Frameworks */,
+				A920403B2238703B007D29EC /* Headers */,
+				A920403D2238703B007D29EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A920402E2238703B007D29EC /* PBXTargetDependency */,
+			);
+			name = "ShareClient-watchOS";
+			productName = ShareClient;
+			productReference = A92040422238703B007D29EC /* ShareClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -354,6 +410,9 @@
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
+					A920402D2238703B007D29EC = {
+						ProvisioningStyle = Manual;
+					};
 				};
 			};
 			buildConfigurationList = 432B0E821CDFC3C50045347B /* Build configuration list for PBXProject "ShareClient" */;
@@ -379,6 +438,7 @@
 			projectRoot = "";
 			targets = (
 				432B0E871CDFC3C50045347B /* ShareClient */,
+				A920402D2238703B007D29EC /* ShareClient-watchOS */,
 				432B0E911CDFC3C50045347B /* ShareClientTests */,
 				43A8EC81210E664300A81379 /* ShareClientUI */,
 				43A8EC75210E653B00A81379 /* Cartfile */,
@@ -410,6 +470,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A920403D2238703B007D29EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A920403E2238703B007D29EC /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -425,7 +493,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CARTHAGE\" = \"YES\" ]; then\n    echo \"Skipping carthage build because we're already in one\"\nelif [ -d $PROJECT_DIR/../../../Loop.xcworkspace ]; then\n    echo \"Skipping carthage build because we're in a workspace\"\nelif [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    unset LLVM_TARGET_TRIPLE_SUFFIX\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
+			shellScript = "if [ \"$CARTHAGE\" = \"YES\" ]; then\n    echo \"Skipping carthage build because we're already in one\"\nelif [ -d $PROJECT_DIR/../Loop.xcworkspace -o -d $PROJECT_DIR/../../../Loop.xcworkspace ]; then\n    echo \"Skipping carthage build because we're in a workspace\"\nelif [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    unset LLVM_TARGET_TRIPLE_SUFFIX\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -466,6 +534,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A92040302238703B007D29EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A92040312238703B007D29EC /* HKUnit.swift in Sources */,
+				A92040322238703B007D29EC /* TimeInterval.swift in Sources */,
+				A92040332238703B007D29EC /* ShareClientManager.swift in Sources */,
+				A92040342238703B007D29EC /* LocalizedString.swift in Sources */,
+				A92040352238703B007D29EC /* ShareGlucose+GlucoseKit.swift in Sources */,
+				A92040362238703B007D29EC /* ShareClient.swift in Sources */,
+				A92040372238703B007D29EC /* ShareService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -483,6 +565,11 @@
 			isa = PBXTargetDependency;
 			target = 432B0E871CDFC3C50045347B /* ShareClient */;
 			targetProxy = 432B0E941CDFC3C50045347B /* PBXContainerItemProxy */;
+		};
+		A920402E2238703B007D29EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43A8EC75210E653B00A81379 /* Cartfile */;
+			targetProxy = A920402F2238703B007D29EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -824,6 +911,69 @@
 			};
 			name = Release;
 		};
+		A92040402238703B007D29EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+				);
+				INFOPLIST_FILE = ShareClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mddub.ShareClient;
+				PRODUCT_NAME = ShareClient;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
+			};
+			name = Debug;
+		};
+		A92040412238703B007D29EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/$(CARTHAGE_PLATFORM_PATH_$(PLATFORM_NAME))",
+				);
+				INFOPLIST_FILE = ShareClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mddub.ShareClient;
+				PRODUCT_NAME = ShareClient;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -868,6 +1018,15 @@
 			buildConfigurations = (
 				43A8EC88210E664300A81379 /* Debug */,
 				43A8EC89210E664300A81379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A920403F2238703B007D29EC /* Build configuration list for PBXNativeTarget "ShareClient-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A92040402238703B007D29EC /* Debug */,
+				A92040412238703B007D29EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
