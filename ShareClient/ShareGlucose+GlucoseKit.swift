@@ -34,6 +34,11 @@ extension ShareGlucose: SensorDisplayable {
     public var isLocal: Bool {
         return false
     }
+    
+    // TODO Placeholder. This functionality will come with LOOP-1311
+    public var glucoseValueType: GlucoseValueType? {
+        return nil
+    }
 }
 
 extension SensorDisplayable {
@@ -43,28 +48,5 @@ extension SensorDisplayable {
         } else {
             return LocalizedString("Needs Attention", comment: "Sensor state description for the non-valid state")
         }
-    }
-}
-
-// TODO Placeholders. This functionality will come with LOOP-1311
-extension ShareGlucose: CGMManagerStatusReport {
-    public var glucoseValueType: GlucoseValueType? {
-        return nil
-    }
-    
-    public var message: String? {
-        return nil
-    }
-    
-    public var messageType: MessageType? {
-        return nil
-    }
-    
-    public var displayProgress: Bool {
-        return false
-    }
-    
-    public var progressPercentCompleted: Double? {
-        return nil
     }
 }

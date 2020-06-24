@@ -61,7 +61,7 @@ public class ShareClientManager: CGMManager {
 
     public let shouldSyncToRemoteService = false
 
-    public var statusReport: CGMManagerStatusReport? {
+    public var sensorState: SensorDisplayable? {
         return latestBackfill
     }
 
