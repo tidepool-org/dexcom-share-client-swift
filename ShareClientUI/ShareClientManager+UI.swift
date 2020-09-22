@@ -34,5 +34,5 @@ extension ShareClientManager: CGMManagerUI {
     // TODO Placeholder. This functionality will come with LOOP-1311
     public var cgmLifecycleProgress: DeviceLifecycleProgress? {
         return nil
-    }    
+    }
 }
