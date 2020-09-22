@@ -35,4 +35,8 @@ extension ShareClientManager: CGMManagerUI {
     public var cgmLifecycleProgress: DeviceLifecycleProgress? {
         return nil
     }
+    
+    public func glucoseRangeCategory(for glucose: GlucoseSampleValue) -> GlucoseRangeCategory? {
+        return nil
+    }
 }
