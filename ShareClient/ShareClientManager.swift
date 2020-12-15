@@ -12,7 +12,7 @@ import HealthKit
 public class ShareClientManager: CGMManager {
     
 
-    public var managerIdentifier = "DexShareClient"
+    public let managerIdentifier = "DexShareClient"
 
     public init() {
         shareService = ShareService(keychainManager: keychain)
