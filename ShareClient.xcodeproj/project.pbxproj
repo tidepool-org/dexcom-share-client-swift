@@ -47,7 +47,6 @@
 		B40BF26623ABD4E700A43CEE /* ShareClientPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF26523ABD4E700A43CEE /* ShareClientPlugin.swift */; };
 		B40BF26823ABD55200A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF26723ABD55200A43CEE /* OSLog.swift */; };
 		B40BF26923ABD55200A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF26723ABD55200A43CEE /* OSLog.swift */; };
-		B4B1176F25B20A4D006428DE /* ShareClientSettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B1176E25B20A4D006428DE /* ShareClientSettingsNavigationController.swift */; };
 		C17D3CC62184CC26003458C8 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A8EC7B210E661400A81379 /* LoopKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,7 +141,6 @@
 		B40BF26423ABD4E600A43CEE /* ShareClientPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareClientPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		B40BF26523ABD4E700A43CEE /* ShareClientPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareClientPlugin.swift; sourceTree = "<group>"; };
 		B40BF26723ABD55200A43CEE /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
-		B4B1176E25B20A4D006428DE /* ShareClientSettingsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareClientSettingsNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +266,6 @@
 				43A8EC96210E680100A81379 /* ShareService+UI.swift */,
 				4325E9D4210E6B4300969CE5 /* UIColor.swift */,
 				43A8EC85210E664300A81379 /* Info.plist */,
-				B4B1176E25B20A4D006428DE /* ShareClientSettingsNavigationController.swift */,
 			);
 			path = ShareClientUI;
 			sourceTree = "<group>";
@@ -581,7 +578,6 @@
 				4325E9D3210E6ADA00969CE5 /* IdentifiableClass.swift in Sources */,
 				43A8EC91210E676500A81379 /* ShareClientManager+UI.swift in Sources */,
 				43A8EC90210E676500A81379 /* ShareClientSetupViewController.swift in Sources */,
-				B4B1176F25B20A4D006428DE /* ShareClientSettingsNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
