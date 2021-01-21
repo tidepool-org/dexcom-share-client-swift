@@ -215,9 +215,9 @@ private extension UIAlertController {
     }
 }
 
-extension ShareClientSettingsViewController: GlucoseUnitObserver {
-    public func glucoseUnitDidChange(to glucoseUnit: HKUnit) {
-        self.glucoseUnit = glucoseUnit
+extension ShareClientSettingsViewController: PreferredGlucoseUnitObserver {
+    public func preferredGlucoseUnitDidChange(to preferredGlucoseUnit: HKUnit) {
+        self.glucoseUnit = preferredGlucoseUnit
         tableView.reloadData()
     }
 }

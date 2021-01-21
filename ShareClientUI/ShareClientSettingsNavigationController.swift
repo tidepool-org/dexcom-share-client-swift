@@ -11,7 +11,7 @@ import HealthKit
 import LoopKit
 import LoopKitUI
 
-public class ShareClientSettingsNavigationController: SettingsNavigationViewController, GlucoseUnitObserver {
+public class ShareClientSettingsNavigationController: SettingsNavigationViewController, PreferredGlucoseUnitObserver {
 
     private var rootViewController: ShareClientSettingsViewController
 
@@ -24,7 +24,7 @@ public class ShareClientSettingsNavigationController: SettingsNavigationViewCont
         fatalError("init(coder:) has not been implemented")
     }
 
-    public func glucoseUnitDidChange(to glucoseUnit: HKUnit) {
-        rootViewController.glucoseUnitDidChange(to: glucoseUnit)
+    public func preferredGlucoseUnitDidChange(to preferredGlucoseUnit: HKUnit) {
+        rootViewController.preferredGlucoseUnitDidChange(to: preferredGlucoseUnit)
     }
 }
