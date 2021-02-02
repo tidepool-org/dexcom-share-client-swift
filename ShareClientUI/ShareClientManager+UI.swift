@@ -12,12 +12,12 @@ import HealthKit
 import ShareClient
 
 extension ShareClientManager: CGMManagerUI {
-    public static func setupViewController(colorPalette: LoopUIColorPalette) -> UIResult<UIViewController & CGMManagerCreateNotifying & CGMManagerOnboardNotifying & CompletionNotifying, CGMManagerUI, Error> {
+    public static func setupViewController(colorPalette: LoopUIColorPalette) -> SetupUIResult<UIViewController & CGMManagerCreateNotifying & CGMManagerOnboardNotifying & CompletionNotifying, CGMManagerUI> {
         return .userInteractionRequired(ShareClientSetupViewController())
     }
 
-    public func settingsViewController(for glucoseUnit: HKUnit, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & PreferredGlucoseUnitObserver & CompletionNotifying) {
-        let settings = ShareClientSettingsViewController(cgmManager: self, glucoseUnit: glucoseUnit, allowsDeletion: true)
+    public func settingsViewController(for preferredGlucoseUnit: HKUnit, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & PreferredGlucoseUnitObserver & CompletionNotifying) {
+        let settings = ShareClientSettingsViewController(cgmManager: self, glucoseUnit: preferredGlucoseUnit, allowsDeletion: true)
         let nav = CGMManagerSettingsNavigationViewController(rootViewController: settings)
         return nav
     }

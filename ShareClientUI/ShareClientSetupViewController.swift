@@ -43,8 +43,8 @@ class ShareClientSetupViewController: UINavigationController, CGMManagerCreateNo
     }
 
     @objc private func save() {
-        cgmManagerCreateDelegate?.cgmManagerCreateNotifying(self, didCreateCGMManager: cgmManager)
-        cgmManagerOnboardDelegate?.cgmManagerOnboardNotifying(self, didOnboardCGMManager: cgmManager)
+        cgmManagerCreateDelegate?.cgmManagerCreateNotifying(didCreateCGMManager: cgmManager)
+        cgmManagerOnboardDelegate?.cgmManagerOnboardNotifying(didOnboardCGMManager: cgmManager)
         completionDelegate?.completionNotifyingDidComplete(self)
     }
 }
