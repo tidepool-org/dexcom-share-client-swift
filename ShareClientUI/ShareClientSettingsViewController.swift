@@ -18,7 +18,7 @@ public class ShareClientSettingsViewController: UITableViewController {
 
     private let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
 
-    private var cancellable: AnyCancellable?
+    private lazy var cancellables = Set<AnyCancellable>()
 
     private var glucoseUnit: HKUnit {
         displayGlucoseUnitObservable.displayGlucoseUnit
@@ -33,13 +33,9 @@ public class ShareClientSettingsViewController: UITableViewController {
 
         super.init(style: .grouped)
 
-        cancellable = displayGlucoseUnitObservable.updatePublisher.sink { [weak self] in
-            guard let strongSelf = self else {
-                return
-            }
-
-            strongSelf.tableView.reloadData()
-        }
+        displayGlucoseUnitObservable.$displayGlucoseUnit
+            .sink { [weak self] _ in self?.tableView.reloadData() }
+            .store(in: &cancellables)
     }
 
     required public init?(coder aDecoder: NSCoder) {
