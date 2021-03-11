@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftUI
+import Combine
 import HealthKit
 import LoopKit
 import LoopKitUI
@@ -15,7 +17,9 @@ public class ShareClientSettingsViewController: UITableViewController {
 
     public let cgmManager: ShareClientManager
 
-    private let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
+    @ObservedObject private var displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
+
+    private var cancellable: AnyCancellable?
 
     private var glucoseUnit: HKUnit {
         displayGlucoseUnitObservable.displayGlucoseUnit
@@ -29,6 +33,14 @@ public class ShareClientSettingsViewController: UITableViewController {
         self.allowsDeletion = allowsDeletion
 
         super.init(style: .grouped)
+
+        cancellable = displayGlucoseUnitObservable.updatePublisher.sink { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+
+            strongSelf.tableView.reloadData()
+        }
     }
 
     required public init?(coder aDecoder: NSCoder) {
