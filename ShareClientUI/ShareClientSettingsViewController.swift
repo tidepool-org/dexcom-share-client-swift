@@ -15,13 +15,17 @@ public class ShareClientSettingsViewController: UITableViewController {
 
     public let cgmManager: ShareClientManager
 
-    private var glucoseUnit: HKUnit
+    private let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
+
+    private var glucoseUnit: HKUnit {
+        displayGlucoseUnitObservable.displayGlucoseUnit
+    }
 
     public let allowsDeletion: Bool
 
-    public init(cgmManager: ShareClientManager, glucoseUnit: HKUnit, allowsDeletion: Bool) {
+    public init(cgmManager: ShareClientManager, displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, allowsDeletion: Bool) {
         self.cgmManager = cgmManager
-        self.glucoseUnit = glucoseUnit
+        self.displayGlucoseUnitObservable = displayGlucoseUnitObservable
         self.allowsDeletion = allowsDeletion
 
         super.init(style: .grouped)
@@ -212,12 +216,5 @@ private extension UIAlertController {
 
         let cancel = LocalizedString("Cancel", comment: "The title of the cancel action in an action sheet")
         addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
-    }
-}
-
-extension ShareClientSettingsViewController: PreferredGlucoseUnitObserver {
-    public func preferredGlucoseUnitDidChange(to preferredGlucoseUnit: HKUnit) {
-        self.glucoseUnit = preferredGlucoseUnit
-        tableView.reloadData()
     }
 }
