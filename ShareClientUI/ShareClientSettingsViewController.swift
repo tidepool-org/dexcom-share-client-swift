@@ -17,7 +17,7 @@ public class ShareClientSettingsViewController: UITableViewController {
 
     public let cgmManager: ShareClientManager
 
-    @ObservedObject private var displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
+    private let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
 
     private var cancellable: AnyCancellable?
 
