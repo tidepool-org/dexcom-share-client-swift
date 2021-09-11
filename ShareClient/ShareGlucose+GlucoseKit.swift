@@ -31,12 +31,22 @@ extension ShareGlucose: GlucoseDisplayable {
         return GlucoseTrend(rawValue: Int(trend))
     }
 
+    public var trendRate: HKQuantity? {
+        return nil
+    }
+
     public var isLocal: Bool {
         return false
     }
     
     // TODO Placeholder. This functionality will come with LOOP-1311
     public var glucoseRangeCategory: GlucoseRangeCategory? {
+        return nil
+    }
+}
+
+extension ShareGlucose {
+    public var condition: GlucoseCondition? {
         return nil
     }
 }
