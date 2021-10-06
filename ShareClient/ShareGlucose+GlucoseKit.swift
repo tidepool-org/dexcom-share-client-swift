@@ -10,6 +10,10 @@ import Foundation
 import HealthKit
 import LoopKit
 
+enum GlucoseLimits {
+    static var minimum: UInt16 = 40
+    static var maximum: UInt16 = 400
+}
 
 extension ShareGlucose: GlucoseValue {
     public var startDate: Date {
@@ -17,7 +21,7 @@ extension ShareGlucose: GlucoseValue {
     }
 
     public var quantity: HKQuantity {
-        return HKQuantity(unit: .milligramsPerDeciliter, doubleValue: Double(glucose))
+        return HKQuantity(unit: .milligramsPerDeciliter, doubleValue: Double(min(max(glucose, GlucoseLimits.minimum), GlucoseLimits.maximum)))
     }
 }
 
@@ -47,7 +51,13 @@ extension ShareGlucose: GlucoseDisplayable {
 
 extension ShareGlucose {
     public var condition: GlucoseCondition? {
-        return nil
+        if glucose < GlucoseLimits.minimum {
+            return .belowRange
+        } else if glucose > GlucoseLimits.maximum {
+            return .aboveRange
+        } else {
+            return nil
+        }
     }
 }
 
